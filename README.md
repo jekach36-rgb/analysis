@@ -66,9 +66,9 @@ Probability of random alignment: p<10−6
 *Periods of four quasars and one FRB plotted against the theoretical harmonic grid \( T = k \cdot 16.35 \) days. All points lie within <0.1% error. Probability of random alignment: \( p < 10^{-6} \).*
 
 PSP vs ΛCDM (Lusso+ 2020, 2410 quasars)
-Model	χ²	AIC	BIC
-PSP	2340.18	2346.18	2363.54
-ΛCDM	2803.90	2807.90	2819.47
+Mode     lχ²    AIC	    BIC
+PSP	  2340.18	2346.18	2363.54
+ΛCDM  2803.90	2807.90	2819.47
 ΔAIC	—	461.72	—
 ✅ PSP statistically outperforms ΛCDM with decisive evidence.
 
