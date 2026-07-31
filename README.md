@@ -44,14 +44,7 @@ python psp_full_free.py
 4. What it does
 ✅ Prints Table 2 — harmonic ratios for 5 independent sources (FRB 20180916B, 3C 273, 3C 345, OJ 287)
 
-✅ Generates Figure 1 — harmonic grid plot with probability 
-p
-<
-10
-−
-6
-p<10 
-−6
+✅ Generates Figure 1 — harmonic grid plot with probability p<10−6
  
 
 ✅ Compares PSP vs ΛCDM on Lusso+ 2020 quasars (ΔAIC = 461.72, PSP wins)
@@ -64,23 +57,8 @@ FRB 20180916B	0.0448	1	0.08
 3C 345	8.51	190	0.06
 OJ 287	11.87	265	0.06
 3C 273 (long)	13.03	291	0.03
-Fundamental period: 
-T
-0
-=
-16.35
-T 
-0
-​
- =16.35 days
-Probability of random alignment: 
-p
-<
-10
-−
-6
-p<10 
-−6
+Fundamental period: T0​=16.35 days
+Probability of random alignment: p<10−6
  ## 📊 Figure 1: Harmonic Grid
 
 ![Harmonic Grid](figure1_global_rhythm_T0_16.35.png)
