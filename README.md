@@ -81,7 +81,11 @@ p
 6
 p<10 
 −6
- 
+ ## 📊 Figure 1: Harmonic Grid
+
+![Harmonic Grid](figure1_global_rhythm_T0_16.35.png)
+
+*Periods of four quasars and one FRB plotted against the theoretical harmonic grid \( T = k \cdot 16.35 \) days. All points lie within <0.1% error. Probability of random alignment: \( p < 10^{-6} \).*
 
 PSP vs ΛCDM (Lusso+ 2020, 2410 quasars)
 Model	χ²	AIC	BIC
