@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-PSP MODEL: ПОЛНЫЙ АНАЛИЗ (РИТМ + КВАЗАРЫ)
-==========================================
-1. Анализ ритма 16.35 дней (долгий базис 10 000 дней)
+PSP MODEL: ПОЛНЫЙ АНАЛИЗ (РЕАЛЬНЫЕ ДАННЫЕ)
+===========================================
+1. Анализ ритма 16.35 дней на реальных данных SDSS DR5
 2. Загрузка реальных квазаров Lusso+ и сравнение PSP vs ΛCDM
 """
 
@@ -21,34 +21,47 @@ H_obs = None
 H_err = None
 
 print("="*70)
-print("PSP: ПОЛНЫЙ АНАЛИЗ (РИТМ + КВАЗАРЫ)")
+print("PSP: ПОЛНЫЙ АНАЛИЗ (РЕАЛЬНЫЕ ДАННЫЕ)")
 print("="*70)
 
 # ============================================================
-# 1. РИТМ 16.35 ДНЕЙ (ДОЛГИЙ БАЗИС)
+# 0. ЗАГРУЗКА РЕАЛЬНЫХ ДАННЫХ SDSS DR5 (ДОБАВЛЕНА ФУНКЦИЯ!)
 # ============================================================
 
-def generate_rhythm_data():
+def load_sdss_data(filename='data/sdss_data.csv'):
     """
-    Генерирует данные ТОЛЬКО для долгих квазаров (10 000 дней).
-    Короткие вспышки (сверхновые) отсеиваются.
+    Загружает реальные данные SDSS DR5 из файла.
     """
-    np.random.seed(42)
-    # ВМЕСТО 2000 дней ставим 10000 дней (почти 30 лет наблюдений)
-    t = np.sort(np.random.uniform(0, 10000, 3000))  
-    T0 = 16.35
-    
-    # Чистый сигнал от Тора (три гармоники)
-    signal = (1.0 * np.sin(2 * np.pi * t / T0) + 
-              0.6 * np.sin(4 * np.pi * t / T0) + 
-              0.4 * np.sin(6 * np.pi * t / T0))
-    
-    # Минимальный шум (он не может убить сигнал на 10000 дней)
-    noise = np.random.normal(0, 0.05, len(t))
-    flux = 1.0 + signal + noise
-    flux = pd.Series(flux).rolling(50, center=True).mean().fillna(1.0).values
-    
-    return t, flux
+    try:
+        df = pd.read_csv(filename)
+        print(f"✅ Файл {filename} загружен.")
+        
+        # Предполагаем, что в файле есть столбцы MJD и r
+        if 'MJD' in df.columns and 'r' in df.columns:
+            times = df['MJD'].values
+            mag_r = df['r'].values
+            flux = 10**(-0.4 * mag_r)
+        else:
+            raise ValueError("В файле нет столбцов MJD или r")
+        
+        # Очистка
+        mask = (times > 0) & (flux > 0) & (np.isfinite(flux))
+        times = times[mask]
+        flux = flux[mask]
+        
+        print(f"✅ Загружено {len(times)} точек данных.")
+        return times, flux
+        
+    except FileNotFoundError:
+        print(f"❌ Файл {filename} не найден.")
+        exit()
+    except Exception as e:
+        print(f"❌ Ошибка загрузки: {e}")
+        exit()
+
+# ============================================================
+# 1. РИТМ 16.35 ДНЕЙ (НА РЕАЛЬНЫХ ДАННЫХ SDSS)
+# ============================================================
 
 def detect_rhythm(times, flux, threshold=1.1):
     """
@@ -77,7 +90,7 @@ def detect_rhythm(times, flux, threshold=1.1):
 # 2. PSP vs ΛCDM на КВАЗАРАХ (lusso_cleaned.csv)
 # ============================================================
 
-def load_lusso_hz(filename='lusso_cleaned.csv'):
+def load_lusso_hz(filename='data/lusso_cleaned.csv'):
     """
     Загружает lusso_cleaned.csv, вычисляет H(z) через геометрию PSP.
     """
@@ -141,7 +154,7 @@ def chi2_lcdm(params):
 
 def compare_models():
     # ЗАГРУЖАЕМ ДАННЫЕ ПРЯМО ЗДЕСЬ, ПЕРЕД ОПТИМИЗАЦИЕЙ
-    load_lusso_hz('lusso_cleaned.csv')
+    load_lusso_hz('data/lusso_cleaned.csv')
     
     print("\n🔧 Оптимизация PSP на квазарах...")
     res_psp = minimize(chi2_psp, [67.4, 0.125, 0.35], method='Nelder-Mead')
@@ -177,8 +190,7 @@ def compare_models():
 # ============================================================
 
 print("\n🔍 Анализ ритма (реальные данные SDSS DR5)...")
-# Загружаем реальные данные из папки data/
-times, flux = load_sdss_data('data/sdss_data.csv') 
+times, flux = load_sdss_data('data/sdss_data.csv')
 freqs, power = detect_rhythm(times, flux)
 
 print("\n⚖️ Сравнение PSP vs ΛCDM...")
@@ -197,7 +209,7 @@ T0 = 16.35
 for k in range(1, 4):
     ax1.axvline(x=k/T0, color='g', linestyle='--', linewidth=1.5)
 ax1.set_xlim(0, 0.3)
-ax1.set_title("Ритм 16.35 дней")
+ax1.set_title("Ритм 16.35 дней (SDSS DR5)")
 ax1.set_xlabel("Частота (1/дни)")
 ax1.set_ylabel("Мощность сигнала")
 ax1.grid(True, alpha=0.3)
