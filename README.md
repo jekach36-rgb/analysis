@@ -119,37 +119,3 @@ Code: MIT License
 
 Data and documentation: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-text
-
----
-
-## Как заменить README на GitHub
-
-1. Открой репозиторий:  
-   `https://github.com/jekach36-rgb/analysis`
-
-2. Найди файл `README.md` и нажми на него.
-
-3. Нажми на значок **карандаша** (✏️) в правом верхнем углу.
-
-4. **Удали весь старый текст** и вставь новый (который я дал выше).
-
-5. Внизу напиши сообщение коммита:
-Update README.md: cleaned up, removed SDSS references, added results
-
-text
-
-6. Нажми **"Commit changes"**.
-
----
-
-## Что теперь в README
-
-- ✅ Нет упоминаний SDSS (ритм убран)
-- ✅ Таблица 2 с 5 источниками
-- ✅ График с вероятностью
-- ✅ PSP vs ΛCDM (ΔAIC = 461.72)
-- ✅ Ссылки на Zenodo и статьи
-- ✅ Инструкция по запуску
-
----
