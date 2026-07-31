@@ -10,7 +10,10 @@
 
 - **Version 11.3 (Final):** [DOI: 10.5281/zenodo.21652276](https://doi.org/10.5281/zenodo.21652276)
 - **Rhythm T₀ = 16.35 days:** [DOI: 10.5281/zenodo.21721585](https://doi.org/10.5281/zenodo.21721585)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21721585.svg)](https://doi.org/10.5281/zenodo.21721585)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21652276.svg)](https://doi.org/10.5281/zenodo.21652276)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 
 ## 📁 Contents
