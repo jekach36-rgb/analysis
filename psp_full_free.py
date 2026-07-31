@@ -176,9 +176,10 @@ def compare_models():
 # 3. ЗАПУСК
 # ============================================================
 
-print("\n🔍 Анализ ритма...")
-t, flux = generate_rhythm_data()
-freqs, power = detect_rhythm(t, flux)
+print("\n🔍 Анализ ритма (реальные данные SDSS DR5)...")
+# Загружаем реальные данные из папки data/
+times, flux = load_sdss_data('data/sdss_data.csv') 
+freqs, power = detect_rhythm(times, flux)
 
 print("\n⚖️ Сравнение PSP vs ΛCDM...")
 psp_params, lcdm_params = compare_models()
