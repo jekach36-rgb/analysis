@@ -10,10 +10,7 @@
 
 - **Version 11.3 (Final):** [DOI: 10.5281/zenodo.21652276](https://doi.org/10.5281/zenodo.21652276)
 - **Rhythm T₀ = 16.35 days:** [DOI: 10.5281/zenodo.21721585](https://doi.org/10.5281/zenodo.21721585)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21721585.svg)](https://doi.org/10.5281/zenodo.21721585)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21652276.svg)](https://doi.org/10.5281/zenodo.21652276)
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ---
 
 ## 📁 Contents
@@ -67,8 +64,11 @@ Probability of random alignment: p<10−6
 ![Harmonic Grid](figure1_global_rhythm_T0_16.35.png)
 
 *Periods of four quasars and one FRB plotted against the theoretical harmonic grid \( T = k \cdot 16.35 \) days. All points lie within <0.1% error. Probability of random alignment: \( p < 10^{-6} \).*
+## 🚀 Run in GitHub Codespaces
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jekach36-rgb/analysis)
 PSP vs ΛCDM (Lusso+ 2020, 2410 quasars)
+
 Model    χ²    AIC	    BIC
 PSP	  2340.18	2346.18	2363.54
 ΛCDM  2803.90	2807.90	2819.47
