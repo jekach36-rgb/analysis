@@ -1,35 +1,47 @@
-# PSP Cosmological Model — Analysis Codes
+# PSP — Фазово-параметрическая космологическая модель циклической Вселенной
 
-**Author:** Evgeniy Chernoknizhny  
-**ORCID:** 0009-0007-2558-9172  
-**License:** MIT (code) / CC BY 4.0 (data and documentation)
-
----
-
-## 📄 Preprints
-
-- **Version 11.3 (Final):** [DOI: 10.5281/zenodo.21652276](https://doi.org/10.5281/zenodo.21652276)
-- **Rhythm T₀ = 16.35 days:** [DOI: 10.5281/zenodo.21721585](https://doi.org/10.5281/zenodo.21721585)
+**«А всё-таки она работает!»**  
+*Е. В. Чернокнижный, 2026*
 
 ---
 
-## 📁 Contents
+## Что это
 
-| File | Description |
-|------|-------------|
-| `psp_full_free.py` | **Main script** — Table 2 (5 sources), harmonic grid plot, PSP vs ΛCDM on Lusso+ quasars |
-| `rhythm_T0_16.35.py` | Standalone script for rhythm detection in 5 independent sources |
-| `resonance.py` | Resonance analysis for OJ 287, 3C 273, and B-mode peaks |
-| `periodicity_analysis.py` | Periodicity analysis (alternative method) |
-| `attenuation_analysis.py` | Power-law decay test on Lusso+ data |
-| `stability_test.py` | Model stability tests |
-| `source_reconstruction.py` | Signal source reconstruction |
-| `data/lusso_cleaned.csv` | Quasar sample from Lusso+ 2020 (2410 objects) |
+PSP (Phase State Parameter) — это полная альтернатива ΛCDM, в которой время заменено фазой цикла M ∈ [0,1]. Вселенная представляет собой замкнутую трёхуровневую систему: внешняя оболочка (тёмная энергия), полость (вещество, излучение, Гравитоки) и внутренний тор-маховик с квазаром.
+
+Модель объясняет все 10 нерешённых проблем ΛCDM без привлечения инфляции, тёмной энергии как отдельной сущности и тёмной материи как неизвестных частиц.
+
+## Ключевые результаты
+
+- **Глобальный ритм Вселенной:** T₀ = 16.35 дней (подтверждён FRB, квазарами, блазарами и B-модами).
+- **Закон затухания:** S(r) = A₀ / r^0.581 (проверен на Lusso, SDSS, DESI).
+- **Ретропрогноз:** Эффект обнаружен в данных SDSS DR5 (2005–2008) и CHIME (2018–2020).
+- **Возрастной фильтр:** Только старые квазары (ошибка < 5%) резонируют с ритмом.
 
 ---
 
-## 🚀 Quick Start
+## Основные публикации
 
+| Название | DOI |
+| :--- | :--- |
+| PSP: Полная теория | 10.24108/preprints-3115804 |
+| PSP: 10 эмпирических проверок | 10.24108/preprints-3115907 |
+| Рождение тора-маховика | 10.24108/preprints-3115916 |
+| От времени к фазе | 10.24108/preprints-3115853 |
+
+Полный список: [Preprints.ru](https://preprints.ru/user/1721) | [Zenodo](https://zenodo.org/record/21652276)
+
+---
+
+## Код
+
+Скрипты для анализа данных, построения графиков и проверки модели.  
+Язык: Python 3.13.  
+Библиотеки: pandas, numpy, astropy, matplotlib, scipy.
+
+## Лицензия
+
+Creative Commons Attribution 4.0 International
 ### 1. Clone the repository
 
 ```bash
