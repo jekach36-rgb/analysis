@@ -122,7 +122,6 @@ JWST галактики: 10.5281/zenodo.21847054
 Email: chernocnijniy@yandex.ru
 ORCID: 0009-0007-2558-9172
 
-📜 Лицензия
-Код: MIT License
-
-Данные и документация: Creative Commons Attribution 4.0 International (CC BY 4.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21893935.svg)](https://doi.org/10.5281/zenodo.21893935)
