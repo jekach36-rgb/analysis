@@ -12,24 +12,10 @@
 pip install -r requirements.txt
 📂 Список скриптов
 Файл	Описание
-psp_full_free.py	Основной анализ: ритм 16.35 дней, гармоники, AIC
-attenuation_analysis.py	Закон затухания 
-S
-(
-r
-)
-∝
-r
-−
-0.581
-S(r)∝r 
-−0.581
- 
-periodicity_analysis.py	Поиск периодичностей в данных
-resonance.py	Резонансный анализ
-rhythm_T0_16.35.py	Проверка глобального ритма 16.35 дней
-rhythm_test.py	Тесты для ритма
-source_reconstruction.py	Восстановление источников
+psp_full_free.py	Основной анализ: ритм 16.35 дней, гармоники, AIC attenuation_analysis.py	Закон затухания S(r)∝r−0.581 periodicity_analysis.py
+Поиск периодичностей в данных resonance.py	Резонансный анализ rhythm_T0_16.35.py
+Проверка глобального ритма 16.35 дней rhythm_test.py
+Тесты для ритма source_reconstruction.py	Восстановление источников
 stability_test.py	Тесты устойчивости модели
 🚀 Запуск основного скрипта
 bash
@@ -50,10 +36,6 @@ python psp_full_free.py
 
 📌 Лицензия
 Код распространяется под лицензией MIT.
-
-text
-
----
 
 ### 📁 **3. demo.ipynb (Jupyter Notebook)**
 
@@ -179,38 +161,7 @@ text
  "nbformat": 4,
  "nbformat_minor": 4
 }
-📁 4. Пример данных (data/README.md)
-Файл: data/README.md
 
-markdown
-# Данные для анализа PSP Model
-
-## 📂 Источники данных
-
-| Файл | Описание | Источник |
-|------|----------|----------|
-| `lusso_cleaned.csv` | Каталог квазаров (2410 объектов) | Lusso+ 2020 (A&A, 642, A150) |
-| `sdss_data.csv` | Данные SDSS | Sloan Digital Sky Survey |
-
-## 📊 Формат данных
-
-### lusso_cleaned.csv
-
-| Колонка | Описание |
-|---------|----------|
-| redshift | Красное смещение |
-| L_X | Рентгеновская светимость |
-| L_UV | Ультрафиолетовая светимость |
-
-### sdss_data.csv
-
-| Колонка | Описание |
-|---------|----------|
-| RA | Прямое восхождение |
-| DEC | Склонение |
-| z | Красное смещение |
-
-## 📌 Использование
 
 Данные загружаются скриптами из папки `../scripts/`.
 
