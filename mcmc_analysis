@@ -1,17 +1,1 @@
-# MCMC Analysis: PSP vs ΛCDM
 
-This repository contains the complete MCMC analysis comparing the Phase-State Parameter (PSP) cosmological model with the standard ΛCDM model.
-
-## Results Summary
-
-| Model | χ² | AIC | BIC |
-|-------|-----|-----|-----|
-| ΛCDM  | 153,699.86 | 153,701.86 | 153,710.31 |
-| PSP   | **93,796.77** | **93,800.77** | **93,817.66** |
-
-**Δχ² = 59,903.09 in favor of PSP**
-
-## Requirements
-
-```bash
-pip install -r requirements.txt
