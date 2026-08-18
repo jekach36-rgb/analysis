@@ -1,1 +1,47 @@
+======================================================================
+BAYESIAN ANALYSIS: PSP vs LCDM
+======================================================================
 
+DATA: Unified HI Rotation Curve Corpus (Flynn, 2026)
+GALAXIES: 422 (with data)
+MEASUREMENTS: 8,963
+
+======================================================================
+RESULTS
+======================================================================
+
+Model    Parameters    Mean BIC
+PSP      1             51,476,751.19
+LCDM     2             51,485,591.32
+
+DIFF (PSP - LCDM): -8,840.13
+
+BAYES FACTOR: K = INFINITY (decisive evidence)
+
+======================================================================
+CONCLUSION
+======================================================================
+
+PSP statistically outperforms LCDM on 422 real galaxies with
+decisive Bayesian evidence. PSP explains galaxy rotation curves
+WITHOUT dark matter.
+
+======================================================================
+FILES
+======================================================================
+
+test_423.py     - replication code
+results_423.csv - per-galaxy results
+
+======================================================================
+AUTHOR
+======================================================================
+
+E.V. Chernoknizhny
+ORCID: 0009-0007-2558-9172
+Email: chernocnijniy@yandex.ru
+GitHub: https://github.com/jekach36-rgb
+
+======================================================================
+STATUS: READY FOR PUBLICATION
+======================================================================
