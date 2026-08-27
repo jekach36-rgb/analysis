@@ -108,9 +108,6 @@ Chatys+ 2019 — RSG pulsation periods (MNRAS, 487, 4832)
 📝 Статус рукописей
 Журнал	ID	Статус
 ПАЖ (Россия)	№442934	На рассмотрении
-Canadian Journal of Physics	cjp-2026-0320	На рассмотрении
-Canadian Journal of Physics	cjp-2026-0326	На рассмотрении
-Canadian Journal of Physics	cjp-2026-0339	На рассмотрении
 📎 Zenodo
 Ритм T0=16.35 дней: 10.5281/zenodo.21721585
 
